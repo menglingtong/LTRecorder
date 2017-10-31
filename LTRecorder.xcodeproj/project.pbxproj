@@ -13,6 +13,7 @@
 		8D1BBF481FA8CC00002A36EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1BBF471FA8CC00002A36EC /* Assets.xcassets */; };
 		8D1BBF4B1FA8CC00002A36EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1BBF491FA8CC00002A36EC /* LaunchScreen.storyboard */; };
 		8D1BBF4E1FA8CC00002A36EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BBF4D1FA8CC00002A36EC /* main.m */; };
+		8D1BBF581FA8CF55002A36EC /* LTRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BBF571FA8CF55002A36EC /* LTRecorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8D1BBF4A1FA8CC00002A36EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D1BBF4C1FA8CC00002A36EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1BBF4D1FA8CC00002A36EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1BBF561FA8CF55002A36EC /* LTRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTRecorder.h; sourceTree = "<group>"; };
+		8D1BBF571FA8CF55002A36EC /* LTRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTRecorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		8D1BBF3D1FA8CC00002A36EC /* LTRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				8D1BBF541FA8CE9B002A36EC /* Framework */,
 				8D1BBF3E1FA8CC00002A36EC /* AppDelegate.h */,
 				8D1BBF3F1FA8CC00002A36EC /* AppDelegate.m */,
 				8D1BBF411FA8CC00002A36EC /* ViewController.h */,
@@ -67,6 +71,23 @@
 				8D1BBF491FA8CC00002A36EC /* LaunchScreen.storyboard */,
 				8D1BBF4C1FA8CC00002A36EC /* Info.plist */,
 				8D1BBF4D1FA8CC00002A36EC /* main.m */,
+			);
+			path = LTRecorder;
+			sourceTree = "<group>";
+		};
+		8D1BBF541FA8CE9B002A36EC /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				8D1BBF551FA8CE9B002A36EC /* LTRecorder */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		8D1BBF551FA8CE9B002A36EC /* LTRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				8D1BBF561FA8CF55002A36EC /* LTRecorder.h */,
+				8D1BBF571FA8CF55002A36EC /* LTRecorder.m */,
 			);
 			path = LTRecorder;
 			sourceTree = "<group>";
@@ -97,6 +118,7 @@
 		8D1BBF331FA8CC00002A36EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LT;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = LryMlt;
 				TargetAttributes = {
@@ -143,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1BBF431FA8CC00002A36EC /* ViewController.m in Sources */,
+				8D1BBF581FA8CF55002A36EC /* LTRecorder.m in Sources */,
 				8D1BBF4E1FA8CC00002A36EC /* main.m in Sources */,
 				8D1BBF401FA8CC00002A36EC /* AppDelegate.m in Sources */,
 			);
@@ -279,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69M2LTLWFX;
 				INFOPLIST_FILE = LTRecorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lrymlt.LTRecorder;
@@ -292,6 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69M2LTLWFX;
 				INFOPLIST_FILE = LTRecorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lrymlt.LTRecorder;
