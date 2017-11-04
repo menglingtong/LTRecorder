@@ -18,4 +18,20 @@
 @end
 @implementation LTRecorder
 
++ (LTRecorder *)recorder
+{
+    return [LTRecorder new];
+}
+
+- (void)captureOutput:(nonnull AVCaptureFileOutput *)output didFinishRecordingToOutputFileAtURL:(nonnull NSURL *)outputFileURL fromConnections:(nonnull NSArray<AVCaptureConnection *> *)connections error:(nullable NSError *)error
+{
+    
+}
+
+- (void)captureOutput:(AVCaptureFileOutput *)output didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray<AVCaptureConnection *> *)connections
+{
+    
+}
+
+
 @end

@@ -11,6 +11,8 @@
 
 @interface LTRecorder : NSObject
 
-@property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer *previewLayer;
+@property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer * _Nullable previewLayer;
+
++ (LTRecorder *__nonnull)recorder;
 
 @end
