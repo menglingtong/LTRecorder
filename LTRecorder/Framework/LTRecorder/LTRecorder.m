@@ -18,6 +18,15 @@
 @end
 @implementation LTRecorder
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 + (LTRecorder *)recorder
 {
     return [LTRecorder new];
