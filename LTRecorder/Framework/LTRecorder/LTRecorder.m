@@ -27,6 +27,13 @@
     return self;
 }
 
+- (void)setupCamera
+{
+    NSError *error = nil;
+    // 1. 初始化 AVCaptureSession
+    self.captureSession = [[AVCaptureSession alloc] init];
+}
+
 + (LTRecorder *)recorder
 {
     return [LTRecorder new];
