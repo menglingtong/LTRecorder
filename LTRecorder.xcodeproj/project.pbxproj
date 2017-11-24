@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		648725171FC7FE4E00ECD470 /* LTPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 648725161FC7FE4E00ECD470 /* LTPlayer.m */; };
 		8D1BBF401FA8CC00002A36EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BBF3F1FA8CC00002A36EC /* AppDelegate.m */; };
 		8D1BBF431FA8CC00002A36EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BBF421FA8CC00002A36EC /* ViewController.m */; };
 		8D1BBF461FA8CC00002A36EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1BBF441FA8CC00002A36EC /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		648725151FC7FE4E00ECD470 /* LTPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTPlayer.h; sourceTree = "<group>"; };
+		648725161FC7FE4E00ECD470 /* LTPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTPlayer.m; sourceTree = "<group>"; };
 		8D1BBF3B1FA8CC00002A36EC /* LTRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1BBF3E1FA8CC00002A36EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D1BBF3F1FA8CC00002A36EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		648725141FC7F7D900ECD470 /* LTPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				648725151FC7FE4E00ECD470 /* LTPlayer.h */,
+				648725161FC7FE4E00ECD470 /* LTPlayer.m */,
+			);
+			path = LTPlayer;
+			sourceTree = "<group>";
+		};
 		8D1BBF321FA8CC00002A36EC = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 		8D1BBF541FA8CE9B002A36EC /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				648725141FC7F7D900ECD470 /* LTPlayer */,
 				8D1BBF551FA8CE9B002A36EC /* LTRecorder */,
 			);
 			path = Framework;
@@ -168,6 +181,7 @@
 				8D1BBF581FA8CF55002A36EC /* LTRecorder.m in Sources */,
 				8D1BBF4E1FA8CC00002A36EC /* main.m in Sources */,
 				8D1BBF401FA8CC00002A36EC /* AppDelegate.m in Sources */,
+				648725171FC7FE4E00ECD470 /* LTPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
