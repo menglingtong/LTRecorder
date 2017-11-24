@@ -8,6 +8,16 @@
 
 #import "LTPlayer.h"
 
+@interface LTPlayer ()
+@property (nonatomic, strong) id timeObserver;
+@property (nonatomic, strong) AVPlayerItem *oldItem;
+@end
+
 @implementation LTPlayer
+
++ (LTPlayer *)player
+{
+    return [LTPlayer new];
+}
 
 @end
