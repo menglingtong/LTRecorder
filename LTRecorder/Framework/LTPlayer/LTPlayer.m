@@ -47,7 +47,26 @@ static char* PlaybackLikelyToKeepUp = "PlaybackLikelyToKeepUp";
 {
     return _timeObserver != nil;
 }
+#pragma mark - setup player item
+- (void)setItemByStringPath:(NSString *)stringPath
+{
+    [self setItemByUrl:[NSURL URLWithString:stringPath]];
+}
 
+- (void)setItemByUrl:(NSURL *)url
+{
+    [self setItemByAsset:[AVURLAsset URLAssetWithURL:url options:nil]];
+}
+
+- (void)setItemByAsset:(AVAsset *)asset
+{
+    [self setItem:[AVPlayerItem playerItemWithAsset:asset]];
+}
+
+- (void)setItem:(AVPlayerItem *)item
+{
+    [self replaceCurrentItemWithPlayerItem:item];
+}
 + (LTPlayer *)player
 {
     return [LTPlayer new];
