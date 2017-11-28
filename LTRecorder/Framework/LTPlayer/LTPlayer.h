@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, LTPlayerStatus) {
 @protocol LTPlayerDelegate;
 @interface LTPlayer : AVPlayer
 + (LTPlayer *__nonnull)player;
+@property (nonatomic, assign) BOOL loopEnabled;
 @property (nonatomic, weak) __nullable id<LTPlayerDelegate> delegate;
 @property (nonatomic, assign) LTPlayerStatus ltPlayerStatus;
 
