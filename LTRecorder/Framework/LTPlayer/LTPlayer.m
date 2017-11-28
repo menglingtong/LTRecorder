@@ -43,6 +43,26 @@ static char* PlaybackLikelyToKeepUp = "PlaybackLikelyToKeepUp";
     }
 }
 
+- (void)initObserver
+{
+    [self removeObserver];
+    if (self.currentItem != nil) {
+        self.oldItem = self.currentItem;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerDidReachedEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.currentItem];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground:) name:UIApplicationWillResignActiveNotification object:self.currentItem];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterPlayGround:) name:UIApplicationDidBecomeActiveNotification object:self.currentItem];
+        
+        [self.currentItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:StatusChanged];
+        [self.currentItem addObserver:self forKeyPath:@"playbackBufferEmpty" options:NSKeyValueObservingOptionNew context:PlaybackBufferEmpty];
+        [self.currentItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:LoadedTimeRanges];
+        [self.currentItem addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:PlaybackLikelyToKeepUp];
+        
+        if ([self.delegate respondsToSelector:@selector(player:didChangedPlayerItem:)]) {
+            [self.delegate player:self didChangedPlayerItem:self.currentItem];
+        }
+    }
+}
+
 - (BOOL)isSendingPlayerInfo
 {
     return _timeObserver != nil;
